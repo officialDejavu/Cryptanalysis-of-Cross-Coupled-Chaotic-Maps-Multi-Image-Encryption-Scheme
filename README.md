@@ -26,7 +26,7 @@ ym = 0.26457834689785 and yx1 = 0.36789543267894
 β2 = (hd49 + hd50 + … + hd64) × 10^-15
 
 
-3. PWLCM Cross-Coupled System Description :
+2. PWLCM Cross-Coupled System Description :
    
 Encryption/decryption scheme uses two PWLCM in a cross-coupled manner, as shown in Fig. 1. The output of PWLCM system-1 is utilized as an input for PWLCM system-2, and the output of PWLCM system-2 is utilized as an input for PWLCM system-1. The mathematical expression for the PWLCM system used in Patro’s et al. scheme is described as follows: 
 

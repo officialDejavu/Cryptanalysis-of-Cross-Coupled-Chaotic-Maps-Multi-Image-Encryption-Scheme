@@ -54,32 +54,31 @@ k is a perfect square. The cipher image in the encryption method is obtained aft
 
 
 
-Decrypting the Multiple grayscale image encryption using cross-coupled chaotic 
-maps without using the keys: 
-1. Scrambling : 
+
+Decrypting the Multiple grayscale image encryption using cross-coupled chaotic maps without using the keys: 
+
+1. Scrambling :
+2. 
 In order to get the scrambled image from the input image 𝐼, the following steps are performed:  
-1. Using the initial parameters, the cross couple PWLCM is exe cuted for 𝑚𝑎𝑥 = 𝑀𝑎𝑥(𝑀1,𝑁1) 
-iteration where 𝑀𝑎𝑥() selects the maximum between 𝑀1 or 𝑁1. The iteration generates two 
-sequences:  
-x𝑖 = 𝑥1,𝑥2,𝑥3,…,𝑥𝑚𝑎𝑥  
+1. Using the initial parameters, the cross couple PWLCM is exe cuted for 𝑚𝑎𝑥 = 𝑀𝑎𝑥(𝑀1,𝑁1) iteration where 𝑀𝑎𝑥() selects the maximum between 𝑀1 or 𝑁1. The iteration generates two sequences:
+    
+x𝑖 = 𝑥1,𝑥2,𝑥3,…,𝑥𝑚𝑎𝑥
+
 y𝑖 = 𝑦1,𝑦2,𝑦3,…,𝑦𝑚𝑎𝑥 
-2. The sequence in 𝑥𝑖 and 𝑦𝑖 are sorted and their positions are used to generate the 
-permutation table 𝑃𝑥 and 𝑃𝑦.  
+
+2. The sequence in 𝑥𝑖 and 𝑦𝑖 are sorted and their positions are used to generate the permutation table 𝑃𝑥 and 𝑃𝑦.  
 3. Using 𝑃𝑥, the rows in the input image 𝐼 are scrambled.  
-4. Using 𝑃𝑦, the columns in the output of Step[3] are scrambled, resulting in row-wise and 
-column-wise scrambled image 𝐼𝑠𝑐𝑚. 
+4. Using 𝑃𝑦, the columns in the output of Step[3] are scrambled, resulting in row-wise and column-wise scrambled image 𝐼𝑠𝑐𝑚.
+   
 2. Enciphering : 
-In order to get the cipher image from the scrambled image 𝐼𝑠𝑐𝑚, the following steps are 
-performed:  
+In order to get the cipher image from the scrambled image 𝐼𝑠𝑐𝑚, the following steps are performed:  
 1. Chaotic sequence 𝑥1𝑖 and 𝑦1𝑖 are generated as:  
-x1𝑖 = 𝑅𝑜𝑢𝑛𝑑(𝑥𝑖 ×106) mod 256  
+x1𝑖 = 𝑅𝑜𝑢𝑛𝑑(𝑥𝑖 ×106) mod 256
+
 y1𝑖 = 𝑅𝑜𝑢𝑛𝑑(𝑦𝑖 ×106) mod 256 where, 1 ≤ 𝑖 ≤ 𝑚𝑎𝑥  
-2. Using 𝑥1𝑖, the first row of the scrambled image 𝐼𝑠𝑐𝑚 is XORed. This output is used to XOR the 
-next row. Overall, the previous output is XORed with the next row till all rows in the scrambled 
-image 𝐼𝑠𝑐𝑚 are exhausted.  
-3. Using 𝑦1𝑖, the first column of the output from Step[2] is XORed. This output is used to XOR 
-the next column. Overall, the previ ous output is XORed with the next column till all columns are 
-exhausted. The resulting image is the cipher image in Patro’s et al. encryption scheme.
+
+2. Using 𝑥1𝑖, the first row of the scrambled image 𝐼𝑠𝑐𝑚 is XORed. This output is used to XOR the next row. Overall, the previous output is XORed with the next row till all rows in the scrambled image 𝐼𝑠𝑐𝑚 are exhausted.  
+3. Using 𝑦1𝑖, the first column of the output from Step[2] is XORed. This output is used to XOR the next column. Overall, the previ ous output is XORed with the next column till all columns are exhausted. The resulting image is the cipher image in Patro’s et al. encryption scheme.
 
 
 

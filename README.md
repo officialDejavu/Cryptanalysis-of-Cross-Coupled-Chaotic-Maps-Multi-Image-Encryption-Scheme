@@ -76,7 +76,7 @@ x1𝑖 = 𝑅𝑜𝑢𝑛𝑑(𝑥𝑖 ×106) mod 256
 y1𝑖 = 𝑅𝑜𝑢𝑛𝑑(𝑦𝑖 ×106) mod 256 where, 1 ≤ 𝑖 ≤ 𝑚𝑎𝑥  
 
 b. Using 𝑥1𝑖, the first row of the scrambled image 𝐼𝑠𝑐𝑚 is XORed. This output is used to XOR the next row. Overall, the previous output is XORed with the next row till all rows in the scrambled image 𝐼𝑠𝑐𝑚 are exhausted.  
-c. Using 𝑦1𝑖, the first column of the output from Step[2] is XORed. This output is used to XOR the next column. Overall, the previ ous output is XORed with the next column till all columns are exhausted. The resulting image is the cipher image in Patro’s et al. encryption scheme.
+c. Using 𝑦1𝑖, the first column of the output from Step[2] is XORed. This output is used to XOR the next column. Overall, the previous output is XORed with the next column till all columns are exhausted. The resulting image is the cipher image in the encryption scheme.
 
 
 
